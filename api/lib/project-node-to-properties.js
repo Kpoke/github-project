@@ -14,7 +14,6 @@ export function projectNodeToProperties(state) {
     id: state.id,
     title: state.title,
     url: state.url,
-    fields: state,
-    a: 'c'
+    fields: state.fields
   };
 }
