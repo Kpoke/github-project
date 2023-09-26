@@ -9,6 +9,7 @@
  * @returns {import("../..").GitHubProjectProperties}
  */
 export function projectNodeToProperties(state) {
+  console.log(JSON.stringify(state))
   return {
     databaseId: state.databaseId,
     id: state.id,
