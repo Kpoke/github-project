@@ -139,7 +139,6 @@ export function getFieldsUpdateQueryAndFields(state, fields) {
 
 /**
  * @param {import("../..").ProjectField} field
- * @param {string | {id: string, value: string | undefined}} valueOrOption
  *
  * @returns {string}
  */
@@ -159,7 +158,7 @@ function toItemFieldValueInput(field, valueOrOption) {
     return `value: {number: ${parseFloat(value)}}`;
   }
 
-  return `value: {${valueKey}: "${escapeQuotes(value)}"}`;
+  return `value: {${valueKey}: "${escapeQuotes(value.id.id)}"}`;
 }
 
 function escapeQuotes(str) {
